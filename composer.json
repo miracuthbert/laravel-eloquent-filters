@@ -1,0 +1,53 @@
+{
+    "name": "miracuthbert/laravel-eloquent-filters",
+    "description": "An eloquent filters package for Laravel 5.8 and up",
+    "keywords": [
+        "miracuthbert",
+        "laravel",
+        "filters",
+        "eloquent-filters"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cuthbert Mirambo",
+            "email": "miracuthbert@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/console": "5.8.*|^6.0",
+        "illuminate/database": "5.8.*|^6.0",
+        "illuminate/http": "5.8.*|^6.0",
+        "illuminate/support": "5.8.*|^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "orchestra/testbench": "^3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Miracuthbert\\Filters\\": "src/"
+        },
+        "files": [
+            "src/Helpers/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Miracuthbert\\Filters\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Miracuthbert\\Filters\\EloquentFiltersServiceProvider"
+            ],
+            "aliases": {
+                "Filters": "Miracuthbert\\Filters\\Facades\\Filters"
+            }
+        }
+    }
+}

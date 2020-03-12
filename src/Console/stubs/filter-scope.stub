@@ -1,0 +1,13 @@
+/**
+ * Scope a query to include only "records" that match passed filters.
+ *
+ * @param \Illuminate\Database\Eloquent\Builder $builder
+ * @param $request
+ * @param array $filters
+ *
+ * @return \Illuminate\Database\Eloquent\Builder
+ */
+public function scopeFilter(Builder $builder, $request, array $filters = [])
+{
+    return (new DummyClass($request))->add($filters)->filter($builder);
+}

@@ -1,0 +1,22 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Database\Eloquent\Builder;
+use Miracuthbert\Filters\FilterAbstract;
+
+class DummyClass extends FilterAbstract
+{
+    /**
+     * Apply filter to order by "COLUMN_NAME" column.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $builder
+     * @param $value
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function filter(Builder $builder, $value)
+    {
+        return $builder->orderBy('COLUMN_NAME', $this->resolveOrderDirection($value));
+    }
+}
